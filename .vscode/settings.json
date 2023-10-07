@@ -10,7 +10,7 @@
     "python.linting.mypyEnabled": false,
     "mypy.dmypyExecutable": "${workspaceFolder}/.venv/bin/dmypy",
 
-    "mypy.targets": ["kinosearch"],
+    "mypy.targets": ["films"],
 
     "editor.rulers": [
         99

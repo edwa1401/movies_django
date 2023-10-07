@@ -29,7 +29,7 @@ disallow_untyped_defs = true
 exclude = '''(?x) (settings\.py$|^env\.|^migrations\.|^manage\.py$|^tests\.py$|^pyproject\.toml$ )'''
 
 [tool.django-stubs]
-django_settings_module = 'kinosearch.films.settings'
+django_settings_module = 'films.films.settings'
 
 
 [tool.ruff]
