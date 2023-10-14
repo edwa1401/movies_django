@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for film in object_list %}
+        <p>{{ film.id }}</p>
+        <p>{{ film.title }}</p>
+        <p>{{ film.title }}</p>
+        <p>{{ film.description }}</p>
+        <p>{{ film.genre }}</p>
+        <p>{{ film.year_of_issue }}</p>
+        <p>{{ film.rating|default:'without rating'}}</p>
+        <p><img src="{{ film.cover.url }}" height="220", width="150"></p>
+    {% endfor %}
+
+</body>
+</html>
