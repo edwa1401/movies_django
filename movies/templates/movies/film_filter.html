@@ -5,9 +5,20 @@
     <title>Filter</title>
 </head>
 <body>
-    <form method="get" action="{% url 'film_filter' %}">
-        <p>Filter: <input type="text" name="genre_filter" value={{genre_filter}}/></p>
-        <p><input type="submit" name="submit" value="submit"/></p>
+    <h1> Filtered films</h1>
+    <form action="" method="get">
+        {{ filter.form.as_p }}
+        <input type="submit" />
     </form>
+    {% for object in filter.qs %}
+        <p>{{ object.pk }}</p>
+        <p>{{ object.title }}</p>
+        <p>{{ object.description }}</p>
+        <p>{{ object.genre }}</p>
+        <p>{{ object.year_of_issue }}</p>
+        <p>{{ object.rating|default:'without rating'}}</p>
+        <p><img src="{{ object.cover.url }}" height="220", width="150"></p>
+    {% endfor %}
 </body>
+/ No newline at the end of file
 </html>

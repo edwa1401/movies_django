@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'movies',
     'dashboard',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -128,4 +129,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = str(BASE_DIR / 'media')
 
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
+
+STATIC_ROOT = 'static/'
