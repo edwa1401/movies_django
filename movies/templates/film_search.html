@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search film by key word</title>
+</head>
+<body>
+    <h1> Movies search by key words page</h1>
+    <form method="get" action="{% url 'movies:film_search' %}">
+        <p>Search word: <input type="text" name="search_word" value={{searh_word}}/></p>
+        <p><input type="submit" name="submit" value="submit"/></p>
+    </form>
+
+    {% for film in search_films %}
+        <p>{{ film.id }}</p>
+        <p>{{ film.title }}</p>
+        <p>{{ film.description }}</p>
+        <p>{{ film.genre }}</p>
+        <p>{{ film.year_of_issue }}</p>
+        <p>{{ film.rating|default:'without rating'}}</p>
+        <p><img src="{{ film.cover.url }}" height="220", width="150"></p>
+    {% endfor %}
+
+</body>
+/ No newline at the end of file
+</html>
